@@ -125,4 +125,11 @@ public class User {
         result = prime * result + ((ssoId == null) ? 0 : ssoId.hashCode());
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "User [id=" + id + ", ssoId=" + ssoId + ", password=" + password
+                + ", firstName=" + firstName + ", lastName=" + lastName
+                + ", email=" + email + "]";
+    }
 }
