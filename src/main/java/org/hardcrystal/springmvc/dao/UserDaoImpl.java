@@ -36,11 +36,14 @@ public class UserDaoImpl extends AbstractDao<Integer, User> implements UserDao{
     }
 
     public void save(User user) {
-
+        persist(user);
     }
 
     public void deleteBySSO(String sso) {
-
+        Criteria criteria = createEntityCriteria();
+        criteria.add(Restrictions.eq("ssoId", sso));
+        User user = (User) criteria.uniqueResult();
+        delete(user);
     }
 
     public List<User> findAllUsers() {
