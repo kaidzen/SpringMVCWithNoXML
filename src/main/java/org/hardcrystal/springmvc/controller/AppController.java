@@ -23,7 +23,7 @@ import java.util.Locale;
  * Created by Administrator on 21.01.2016.
  */
 @Controller
-@RequestMapping("/")
+@RequestMapping(value = "/")
 @SessionAttributes("roles")
 public class AppController {
 
