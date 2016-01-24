@@ -41,7 +41,7 @@ public class AppController {
     public String listUsers(ModelMap model){
         List<User> users = userService.findAllUsers();
         model.addAttribute("users", users);
-        return "userlist";
+        return "userslist";
     }
 
     //Provide the medium to add a new user
@@ -124,7 +124,13 @@ public class AppController {
         return "redirect:/list";
     }
 
-    @ModelAttribute("roles")
+    @RequestMapping(value = "", method = RequestMethod.HEAD)
+     public String emptyMethod() {
+        return "";
+    }
+
+
+        @ModelAttribute("roles")
     public List<UserProfile> initializeProfiles(){
         return userProfileService.findAll();
     }

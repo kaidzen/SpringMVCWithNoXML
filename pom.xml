@@ -103,7 +103,11 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-  <build>
+  <profiles>
+
+  </profiles>
+
+    <build>
         <pluginManagement>
             <plugins>
                 <plugin>
